@@ -1,0 +1,105 @@
+using System;
+
+namespace CSTestings
+{
+    class MainUse
+    {
+        /* If you're not new to C#, you'll know this is the Main entry
+         * point of the program. I'm working on the practice of keeping 
+         * Main() as clean and neat as possible while still having the
+         * the program worked as designed.*/
+        static void Main(string[] args)
+        {
+            string input = string.Empty;
+            while (input != "slap")
+            {
+                Console.WriteLine("\nWhat's up?\n");
+                input = Console.ReadLine();
+                
+                if (input == "roll")
+                {
+                    Roller();
+                }
+                
+            }
+
+        }
+        
+        /* This is the method used to determine what die you'd like
+         * to roll. I'm sure there are faster ways to go about it, 
+         * all things that will be implemented in due time.*/
+        public static void Roller()
+        {
+            Random rand = new Random();
+            string input = string.Empty;
+
+            while (input != "exit")
+            {
+                Console.WriteLine("----------------");
+                Console.Write("What dice would you like to roll:  ");
+                input = Console.ReadLine();
+                Console.WriteLine("----------------");
+
+                if (input == "d20")
+                {
+                    var n = rand.Next(1, 21);
+                    Console.Write("\n\nYou Rolled:   " + n);
+                    Console.WriteLine("\n\nRoll again?");
+                    input = Console.ReadLine();
+                }
+
+                if (input == "d10")
+                {
+                    var n = rand.Next(1, 11);
+                    Console.Write("\n\nYou Rolled:   " + n);
+                    Console.WriteLine("\n\nRoll again?");
+                    input = Console.ReadLine();
+                }
+
+                if (input == "p10")
+                {
+                    var n = rand.Next(1, 9);
+                    Console.Write("\n\nYou Rolled:   " + n);
+                    Console.WriteLine("\n\nRoll again?");
+                    input = Console.ReadLine();
+                }
+
+                if (input == "d6")
+                {
+                    var n = rand.Next(1, 7);
+                    Console.Write("\n\nYou Rolled:   " + n);
+                    Console.WriteLine("\n\nRoll again?");
+                    input = Console.ReadLine();
+                }
+
+                if (input == "d8")
+                {
+                    var n = rand.Next(1, 9);
+                    Console.Write("\n\nYou Rolled:   " + n);
+                    Console.WriteLine("\n\nRoll again?");
+                    input = Console.ReadLine();
+                }
+
+                if (input == "d4")
+                {
+                    var n = rand.Next(1, 5);
+                    Console.Write("\n\nYou Rolled:   " + n);
+                    Console.WriteLine("\n\nRoll again?");
+                    input = Console.ReadLine();
+                }
+
+                if (input == "d12")
+                {
+                    var n = rand.Next(1, 13);
+                    Console.Write("\n\nYou Rolled:   " + n);
+                    Console.WriteLine("\n\nRoll again?");
+                    input = Console.ReadLine();
+                }
+            }
+
+
+            
+        }
+
+    }
+}
